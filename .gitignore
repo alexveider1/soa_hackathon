@@ -1,0 +1,26 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+.venv
+*.csv
+
+data/
+models/
+.task3_imgs/
+notebooks/.ipynb_checkpoints/
+CLAUDE.md
+.claude
+catboost_info/
+
+*.log
+*.pyc
+/__pycache__
+
+hackathon_2026.pdf
+
+task_3/notebooks/_build.py
