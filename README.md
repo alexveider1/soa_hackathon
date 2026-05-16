@@ -1,3 +1,5 @@
+# School of Analytics 2025-2026 Hackathon
+
 ## Структура репозитория
 
 | Путь | Назначение |
@@ -16,6 +18,5 @@
 
 ```bash
 uv sync                                   # установить зависимости в .venv
-uv run jupyter lab                        # открыть ноутбуки
-uv run python task_3/notebooks/_build.py  # пересобрать ноутбуки задачи 3 из _build.py
+uv run ...
 ```
