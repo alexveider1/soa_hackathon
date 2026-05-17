@@ -13,10 +13,3 @@
 | `task_3/models/` | Обученные модели: одиночный CatBoost (`catboost_genre.cbm`) и ансамбль (`ensemble/`). |
 | `task_4/` | Задача 4 |
 | `pyproject.toml`, `uv.lock`, `.python-version` | Конфигурация окружения. Управление через **uv**, Python **3.12**. |
-
-## Быстрый старт
-
-```bash
-uv sync
-uv run ...
-```
