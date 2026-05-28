@@ -24,3 +24,5 @@ catboost_info/
 hackathon_2026.pdf
 
 task_3/notebooks/_build.py
+".ipynb_checkpoints/" 
+".ipynb_checkpoints/" 
