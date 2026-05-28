@@ -1,15 +1,28 @@
 # School of Analytics 2025-2026 Hackathon
 
-## Структура репозитория
+### Запуск (требуется только `uv`)
+
+```bash
+uv sync
+uv run jupyterlab
+# запустить ноутбуки по отдельности
+```
+
+### Структура репозитория
 
 | Путь | Назначение |
 |---|---|
-| `data/` | Исходные данные. Содержит `spotify_data.csv|
+| `data/` | Исходные данные |
 | `task_1/` | Задача 1 |
 | `task_2/` | Задача 2 |
 | `task_3/` | Задача 3 |
-| `task_3/notebooks/` | Ноутбуки и Python-модули задачи 3 |
-| `task_3/data/splits/` | Зафиксированные train/val/test parquet-выборки |
-| `task_3/models/` | Обученные модели: одиночный CatBoost (`catboost_genre.cbm`) и ансамбль (`ensemble/`). |
 | `task_4/` | Задача 4 |
-| `pyproject.toml`, `uv.lock`, `.python-version` | Конфигурация окружения. Управление через **uv**, Python **3.12**. |
+| `pyproject.toml`, `uv.lock`, `.python-version` | Конфигурация окружения |
+| `presentation_temp.pptx` | промежуточная версия презентации |
+| `presentation.qmd` и `presentation.html` | финальная версия презентации |
+
+`Важно`: для просмотра презентации не требуется запуск ноутбуков и подключение к ядру, но необходимо наличие других папок из репозитория в окружении (для отображения графиков, в том числе динамических)
+
+### Лицензия
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
