@@ -1,0 +1,1995 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<script src="presentation_files/libs/clipboard/clipboard.min.js"></script>
+<script src="presentation_files/libs/quarto-html/tabby.min.js"></script>
+<script src="presentation_files/libs/quarto-html/popper.min.js"></script>
+<script src="presentation_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="presentation_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="presentation_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="presentation_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
+
+  <meta name="author" content="Алексей Карасев, Акиева Алина, Кахоров Пайрав">
+  <meta name="dcterms.date" content="2026-05-28">
+  <title>Хакатон School of Analytics 2025-2026</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
+  <link href="presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="presentation_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Хакатон School of Analytics 2025-2026</h1>
+  <p class="subtitle"><a href="https://github.com/alexveider1/soa_hackathon">GitHub</a></p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Алексей Карасев, Акиева Алина, Кахоров Пайрав 
+</div>
+</div>
+</div>
+
+  <p class="date">2026-05-28</p>
+</section>
+<section>
+<section id="введение" class="title-slide slide level1 center">
+<h1>Введение</h1>
+
+</section>
+<section id="датасет" class="slide level2">
+<h2>Датасет</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Объём</td>
+<td><strong>1 159 764</strong> трека</td>
+</tr>
+<tr class="even">
+<td>Уникальных артистов</td>
+<td>64 158</td>
+</tr>
+<tr class="odd">
+<td>Уникальных жанров</td>
+<td><strong>82</strong></td>
+</tr>
+<tr class="even">
+<td>Временной охват</td>
+<td>2000 - 2023 гг.</td>
+</tr>
+<tr class="odd">
+<td>Признаков</td>
+<td>13 числовых аудио-характеристик и 2 категориальные фичи</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Аудио-признаки</strong>: <code>danceability</code>, <code>energy</code>, <code>key</code>, <code>loudness</code>, <code>mode</code>, <code>speechiness</code>, <code>acousticness</code>, <code>instrumentalness</code>, <code>liveness</code>, <code>valence</code>, <code>tempo</code>, <code>duration_ms</code>, <code>time_signature</code>.</p>
+<p><strong>Категориальные-признаки</strong>: <code>artist_name</code>, <code>genre</code></p>
+</section>
+<section id="технологический-стек" class="slide level2">
+<h2>Технологический стек</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Слой</th>
+<th>Инструменты</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Язык</td>
+<td><strong>Python 3.12</strong></td>
+</tr>
+<tr class="even">
+<td>Управление зависимостями</td>
+<td><strong>uv</strong></td>
+</tr>
+<tr class="odd">
+<td>Классические ML</td>
+<td><code>scikit-learn</code>, <code>XGBoost</code>, <code>CatBoost</code>, <code>LightGBM</code></td>
+</tr>
+<tr class="even">
+<td>Временные ряды</td>
+<td><code>statsmodels</code> (Holt, SARIMAX)</td>
+</tr>
+<tr class="odd">
+<td>Кластеризация</td>
+<td><code>MiniBatchKMeans</code>, <code>UMAP</code></td>
+</tr>
+<tr class="even">
+<td>Объяснимость</td>
+<td><code>SHAP</code></td>
+</tr>
+<tr class="odd">
+<td>Визуализация</td>
+<td><code>matplotlib</code>, <code>seaborn</code>, <code>plotly</code></td>
+</tr>
+<tr class="even">
+<td>Ускорение</td>
+<td>CUDA GPU для CatBoost и LightGBM</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="план-презентации" class="slide level2 scrollable">
+<h2>План презентации</h2>
+<ol type="1">
+<li><strong>Задача 1.</strong> Кластеризация треков по настроению</li>
+<li><strong>Задача 2.</strong> Предсказание популярности треков</li>
+<li><strong>Задача 3.</strong> Многоклассовая классификация жанров</li>
+<li><strong>Задача 4.</strong> Прогнозирование трендов аудио-характеристик и популярности жанров</li>
+<li><strong>Бонус.</strong> Контентная рекомендательная система на KNN</li>
+</ol>
+<p>В конце сводные выводы и рекомендации.</p>
+</section></section>
+<section>
+<section id="задача-1.-кластеризация-по-настроению" class="title-slide slide level1 center">
+<h1>Задача 1. Кластеризация по настроению</h1>
+
+</section>
+<section id="постановка-задачи" class="slide level2">
+<h2>Постановка задачи</h2>
+<p><strong>Гипотеза:</strong> пользователи воспринимают музыку не столько по жанрам, сколько по эмоциональному профилю.</p>
+<p><strong>Цель:</strong> обнаружить типы треков по настроению пользователей во время прослушивания через кластеризацию аудио-характеристик</p>
+<p><strong>Почему это важно:</strong></p>
+<ul>
+<li>Жанровые рекомендации часто промахиваются по настроению пользователя и контексту, в котором он находится</li>
+<li>Кластеризация по настроению даёт дополнительные признаки для рекомендательной системы <span class="math inline">\(-\)</span> можно улучшить ее</li>
+<li>Можно генерировать хорошие контекстуальные плейлисты</li>
+</ul>
+</section>
+<section id="подготовка-данных" class="slide level2">
+<h2>Подготовка данных</h2>
+<p><strong>Выбор признаков</strong> - 9 из 13 аудио-характеристик:</p>
+<p><code>danceability</code>, <code>energy</code>, <code>loudness</code>, <code>speechiness</code>, <code>acousticness</code>, <code>instrumentalness</code>, <code>liveness</code>, <code>valence</code>, <code>tempo</code>.</p>
+<p><strong>Исключены:</strong> <code>key</code>, <code>mode</code>, <code>time_signature</code> - они относятся к теории музыки, а не к эмоциональному восприятию.</p>
+<p><strong>Препроцессинг:</strong></p>
+<ul>
+<li>Стандартизация через <code>StandardScaler</code></li>
+<li>Итог: <strong>1 136 690 треков с 9 признаками</strong></li>
+</ul>
+</section>
+<section id="eda-распределения-признаков" class="slide level2">
+<h2>EDA: распределения признаков</h2>
+
+<img data-src="task_1/results/01_feature_distributions.png" class="quarto-figure quarto-figure-center r-stretch"><p>9 гистограмм показывают, что распределения сильно различаются: <code>acousticness</code> и <code>instrumentalness</code> бимодальны с тяжелыми хвостами по краям распределений, <code>valence</code> и <code>danceability</code> ближе к нормальному. <code>speechless</code>, <code>loadness</code> и <code>liveness</code> асиметричны</p>
+</section>
+<section id="eda-корреляции" class="slide level2">
+<h2>EDA: корреляции</h2>
+
+<img data-src="task_1/results/02_correlation_heatmap.png" class="quarto-figure quarto-figure-center r-stretch" style="width:85.0%"><p><strong>Ключевые наблюдения:</strong></p>
+<ul>
+<li><code>energy</code> и <code>loudness</code> сильно скоррелированы (0.78) - оба отражают громкость и плотность</li>
+<li><code>acousticness</code> отрицательно коррелирует с <code>energy</code> (-0.7) - ожидаемо</li>
+<li><code>valence</code> слабо связан со всеми остальными признаками</li>
+</ul>
+</section>
+<section id="временная-эволюция" class="slide level2">
+<h2>Временная эволюция</h2>
+
+<img data-src="task_1/results/03_temporal_evolution.png" class="quarto-figure quarto-figure-center r-stretch"><p><strong>Наблюдения:</strong></p>
+<ul>
+<li><code>valence</code> снижается с примерно 0.50 до чуть больше 0.4 за 23 года выборки <span class="math inline">\(\Rightarrow\)</span> музыка становится грустнее</li>
+<li><code>energy</code> стабилен</li>
+<li><code>acousticness</code> постепенно растёт</li>
+<li><code>danceability</code> тоже постепенно растет</li>
+</ul>
+</section>
+<section id="жанры-и-аудио-характеристики" class="slide level2">
+<h2>Жанры и аудио-характеристики</h2>
+
+<img data-src="task_1/results/04_genre_audio_heatmap.png" class="quarto-figure quarto-figure-center r-stretch" style="width:85.0%"><p>Тепловая карта по топ-15 жанрам и 9 признакам - видно, что наиболее популярные жанры сильно похожи по аудио-профилю</p>
+</section>
+<section id="пространство-energy-и-valence" class="slide level2">
+<h2>Пространство Energy и Valence</h2>
+
+<img data-src="task_1/results/05_energy_valence_space.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><p>Четыре эмоциональных квадранта на проекции 30 000 треков (цвет = <code>danceability</code>):</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Квадрант</th>
+<th>Энергия</th>
+<th>Валентность</th>
+<th>Настроение</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>верхний правый</td>
+<td>высокая</td>
+<td>высокая</td>
+<td><strong>Party / Энергия</strong></td>
+</tr>
+<tr class="even">
+<td>нижний правый</td>
+<td>низкая</td>
+<td>высокая</td>
+<td><strong>Calm / Relax</strong></td>
+</tr>
+<tr class="odd">
+<td>верхний левый</td>
+<td>высокая</td>
+<td>низкая</td>
+<td><strong>Intense / Dark</strong></td>
+</tr>
+<tr class="even">
+<td>нижний левый</td>
+<td>низкая</td>
+<td>низкая</td>
+<td><strong>Melancholy</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="выбор-оптимального-k" class="slide level2">
+<h2>Выбор оптимального K</h2>
+
+<img data-src="task_1/results/06_optimal_k.png" class="quarto-figure quarto-figure-center r-stretch"><p>Три согласованных метрики на выборке 30 000:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Метрика</th>
+<th>Оптимум</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Silhouette Score</td>
+<td>K = 6</td>
+<td><strong>0.1943</strong></td>
+</tr>
+<tr class="even">
+<td>Davies-Bouldin Index</td>
+<td>K = 6</td>
+<td><strong>1.4794</strong></td>
+</tr>
+<tr class="odd">
+<td>Метод локтя</td>
+<td>K <span class="math inline">\(\approx\)</span> 6 - 8</td>
+<td>излом на графике</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Финальный выбор: K = 7</strong> - компромисс между статистическим оптимумом и интерпретируемостью для бизнеса</p>
+</section>
+<section id="алгоритм-minibatchkmeans" class="slide level2">
+<h2>Алгоритм: MiniBatchKMeans</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Гиперпараметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>n_clusters</code></td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td><code>n_init</code></td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td><code>batch_size</code></td>
+<td>8 192</td>
+</tr>
+<tr class="even">
+<td><code>max_iter</code></td>
+<td>300</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Почему MiniBatch:</strong> 1.1 млн объектов - классический K-Means слишком медленный, мини-батч даёт сильно быстрее, и при этом качество не сильно падает из-за репрезентативности мини-батча</p>
+</section>
+<section id="кластеров-настроений" class="slide level2">
+<h2>7 кластеров настроений</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 36%">
+<col style="width: 17%">
+<col style="width: 15%">
+<col style="width: 10%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Архетип</th>
+<th>Треков</th>
+<th>Доля</th>
+<th>Energy</th>
+<th>Valence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Интенсивный / Тёмный</td>
+<td>189 235</td>
+<td>16.6 %</td>
+<td>0.85</td>
+<td>0.27</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Тренировка / Мотивация</td>
+<td>141 739</td>
+<td>12.5 %</td>
+<td>0.77</td>
+<td>0.54</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Акустика / Уют</td>
+<td>179 494</td>
+<td>15.8 %</td>
+<td>0.36</td>
+<td>0.39</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Смешанный / Нейтральный</td>
+<td>74 308</td>
+<td>6.5 %</td>
+<td>0.72</td>
+<td>0.48</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td><strong>Ритмичный / Позитивный</strong></td>
+<td><strong>284 568</strong></td>
+<td><strong>25.0 %</strong></td>
+<td>0.73</td>
+<td><strong>0.71</strong></td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Инструментальный / Фокус</td>
+<td>157 891</td>
+<td>13.9 %</td>
+<td>0.73</td>
+<td>0.42</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Ambient / Lo-Fi</td>
+<td>109 455</td>
+<td>9.6 %</td>
+<td>0.17</td>
+<td>0.20</td>
+</tr>
+</tbody>
+</table>
+<p>Самый крупный кластер - <strong>Ритмичный / Позитивный</strong> (четверть всего каталога).</p>
+</section>
+<section id="профили-кластеров" class="slide level2">
+<h2>Профили кластеров</h2>
+
+<img data-src="task_1/results/07_radar_profiles.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="жанры-и-настроения" class="slide level2">
+<h2>Жанры и Настроения</h2>
+
+<img data-src="task_1/results/09_genre_mood_heatmap.png" class="quarto-figure quarto-figure-center r-stretch" style="width:85.0%"><p><strong>Вывод:</strong> один жанр распределяется по <strong>4-5 кластерам</strong> настроения. Например, <em>pop</em> живёт почти везде, <em>rock</em> концентрируется в <code>Dark/Intense</code>, электроника - в <code>Instrumental/Focus</code>.</p>
+<p>Таким образом, жанр <strong>не</strong> является хорошим прокси настроения.</p>
+</section>
+<section id="популярность-по-настроению" class="slide level2">
+<h2>Популярность по настроению</h2>
+
+<img data-src="task_1/results/12_popularity_by_mood.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="главный-дашборд" class="slide level2">
+<h2>Главный дашборд</h2>
+<iframe src="task_1/results/00_MAIN_DASHBOARD.html" width="100%" height="1000" style="border:0; background:white;">
+</iframe>
+</section>
+<section id="umap" class="slide level2">
+<h2>UMAP</h2>
+<iframe src="task_1/results/08_mood_explorer_interactive_1.html" width="100%" height="1000" style="border:0; background:white;">
+</iframe>
+</section>
+<section id="эволюция-по-годам" class="slide level2">
+<h2>Эволюция по годам</h2>
+<iframe src="task_1/results/10_mood_evolution_decades.html" width="100%" height="1000" style="border:0; background:white;">
+</iframe>
+</section>
+<section id="тренд-по-годам" class="slide level2">
+<h2>Тренд по годам</h2>
+<iframe src="task_1/results/11_mood_trend_by_year.html" width="100%" height="1000" style="border:0; background:white;">
+</iframe>
+</section>
+<section id="выводы-по-задаче-1" class="slide level2">
+<h2>Выводы по задаче 1</h2>
+<ul>
+<li><strong>Семь устойчивых архетипов настроения</strong> покрывают весь каталог Spotify</li>
+<li><strong>Жанр</strong> <span class="math inline">\(\neq\)</span> Настроение: один жанр распадается на 4-5 настроений</li>
+<li><strong>Музыка становится темнее и грустнее</strong>: <code>valence</code> падает с 0.50 до 0.43</li>
+<li><strong>Ритмичный / Позитивный - главный коммерческий кластер</strong> (25 % каталога, наибольшая средняя популярность)</li>
+<li><strong>Бизнес-применения:</strong> mood-radio, слайдер настроения в UI, контекстуальные плейлисты (утренняя спокойная музыка, монотонная музыка для учебы, для занятий спортом и т д)</li>
+</ul>
+</section></section>
+<section>
+<section id="задача-2.-предсказание-популярности-треков" class="title-slide slide level1 center">
+<h1>Задача 2. Предсказание популярности треков</h1>
+
+</section>
+<section id="постановка-задачи-1" class="slide level2">
+<h2>Постановка задачи</h2>
+<p><strong>Цель:</strong> предсказать <code>popularity</code> трека (0 - 100) и классифицировать его как <strong>хит</strong> (<code>popularity &gt;= 70</code>) на основе аудио-характеристик и метаданных.</p>
+<p><strong>Главная проблема:</strong> сильный <strong>дисбаланс классов</strong> - хитов всего <span class="math inline">\(\approx\)</span> 0.3 % от всех треков.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Объём тренировки</td>
+<td>811 234</td>
+</tr>
+<tr class="even">
+<td>Объём теста</td>
+<td>348 530</td>
+</tr>
+<tr class="odd">
+<td>True hits в тесте</td>
+<td><span class="math inline">\(\approx\)</span> 1 039</td>
+</tr>
+<tr class="even">
+<td>Доля хитов</td>
+<td>0.3 %</td>
+</tr>
+<tr class="odd">
+<td>Целевой порог</td>
+<td>popularity <span class="math inline">\(\geq\)</span> 70</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="архитектура" class="slide level2">
+<h2>Архитектура</h2>
+<p>Класс <a href="task_2/models.py"><code>HitPrediction</code></a> - единый интерфейс над разными имплементациями ML моделей</p>
+<!-- сгенерировали эту диаграму -->
+<pre><code>        ┌──────────────────────────────┐
+   X -&gt; │   HitPrediction              │  -&gt; predict_popularity (log-prob)
+        │  ─────────────────────────   │  -&gt; predict_hit (0/1)
+        │  • деление cat/num           │  -&gt; evaluate (F1, ROC-AUC, CM)
+        │  • LabelEncoder для sklearn  │
+        │  • native cat features в CB  │
+        │  • MODEL_FACTORY: 3 модели   │
+        └──────────────────────────────┘
+                       │
+            ┌──────────┼──────────┐
+            ▼          ▼          ▼
+         CatBoost   XGBoost   LinearRegression</code></pre>
+<p>Конфиги моделей вынесены в <a href="task_2/mappings.py"><code>task_2/mappings.py</code></a>.</p>
+</section>
+<section id="конфигурации-моделей" class="slide level2">
+<h2>Конфигурации моделей</h2>
+<p><strong>CatBoost</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a>iterations<span class="op">=</span><span class="dv">1000</span>, depth<span class="op">=</span><span class="dv">8</span>, learning_rate<span class="op">=</span><span class="fl">0.03</span>,</span>
+<span id="cb2-2"><a href=""></a>loss_function<span class="op">=</span><span class="st">"RMSE"</span>, eval_metric<span class="op">=</span><span class="st">"RMSE"</span>,</span>
+<span id="cb2-3"><a href=""></a>early_stopping_rounds<span class="op">=</span><span class="dv">50</span></span></code></pre></div><button title="Скопировать текст" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>XGBoost</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a>n_estimators<span class="op">=</span><span class="dv">300</span>, max_depth<span class="op">=</span><span class="dv">6</span>, learning_rate<span class="op">=</span><span class="fl">0.05</span>,</span>
+<span id="cb3-2"><a href=""></a>objective<span class="op">=</span><span class="st">"reg:squarederror"</span>, n_jobs<span class="op">=-</span><span class="dv">1</span></span></code></pre></div><button title="Скопировать текст" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>LinearRegression</strong> - бейзлайн</p>
+<p>Бинаризация: <code>predict_hit = (predict_popularity $\geq$ hit_border)</code>, по умолчанию <code>hit_border = 70</code>.</p>
+</section>
+<section id="результаты-сравнения-моделей" class="slide level2">
+<h2>Результаты сравнения моделей</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 21%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Модель</th>
+<th>F1 (hit)</th>
+<th>ROC-AUC</th>
+<th>Время обучения</th>
+<th>TP</th>
+<th>FP</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LinearRegression</td>
+<td>0.0000</td>
+<td>0.8251</td>
+<td>1.2 c</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>CatBoost</td>
+<td>0.0038</td>
+<td>0.9482</td>
+<td>79.8 c</td>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td><strong>XGBoost</strong></td>
+<td><strong>0.0188</strong></td>
+<td><strong>0.9513</strong></td>
+<td><strong>13.8 c</strong></td>
+<td><strong>10</strong></td>
+<td><strong>13</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>XGBoost</strong> выигрывает по ROC-AUC и F1 при пороге 70 и при этом существенно быстрее, чем <code>CatBoost</code> (при обучении и инференсе на CPU)</p>
+</section>
+<section id="confusion-matrix" class="slide level2">
+<h2>Confusion matrix</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Предсказано: не хит</th>
+<th>Предсказано: хит</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Истина: не хит</strong></td>
+<td>346 878 (TN)</td>
+<td>13 (FP)</td>
+</tr>
+<tr class="even">
+<td><strong>Истина: хит</strong></td>
+<td>1 029 (FN)</td>
+<td>10 (TP)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Precision</strong> = 10 / 23 = <strong>43.5 %</strong> - почти половина предсказанных хитов действительно хиты.</p>
+<p><strong>Recall</strong> = 10 / 1 039 = <strong>0.96 %</strong> - но мы ловим меньше 1 % всех хитов.</p>
+</section>
+<section id="выводы-по-задаче-2" class="slide level2">
+<h2>Выводы по задаче 2</h2>
+<ul>
+<li><strong>XGBoost - рекомендованная имлементация градиентного бустинга</strong>: ROC-AUC 0.9513, при этом обучение быстрое</li>
+<li><strong>F1 низкий не из-за плохой модели</strong>, а из-за сильного дисбаланса классов; ROC-AUC как метрика более информативен на таких данных</li>
+<li><strong>Точки роста:</strong>
+<ul>
+<li>Понижение <code>hit_border</code> до 50 - 60 для увеличения recall</li>
+<li><code>class_weight="balanced"</code> или SMOTE/undersampling</li>
+<li>Добавление temporal-фичей (тренд популярности артиста), social features (упоминания)</li>
+<li>Двухэтапная стратегия: regress popularity <span class="math inline">\(\rightarrow\)</span> калибровать порог под бизнес-цель</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="задача-3.-классификация-жанров" class="title-slide slide level1 center">
+<h1>Задача 3. Классификация жанров</h1>
+
+</section>
+<section id="постановка-задачи-2" class="slide level2">
+<h2>Постановка задачи</h2>
+<p><strong>Цель:</strong> для каждого трека предсказать <strong>один из 82 жанров</strong> по 13 аудио-признакам.</p>
+<p><strong>Особенности задачи:</strong></p>
+<ul>
+<li><strong>82 класса</strong> - многоклассовая задача</li>
+<li><strong>Сильная несбалансированность</strong> жанров</li>
+<li>Без текстовых / визуальных / social-фичей - только аудио</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Выборка</th>
+<th>Размер</th>
+<th>Процент</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Train</td>
+<td>811 834</td>
+<td>70 %</td>
+</tr>
+<tr class="even">
+<td>Val</td>
+<td>173 965</td>
+<td>15 %</td>
+</tr>
+<tr class="odd">
+<td>Test</td>
+<td>173 965</td>
+<td>15 %</td>
+</tr>
+</tbody>
+</table>
+<p>Трейн-вал-тест сплит сделали через <code>StratifiedShuffleSplit</code></p>
+</section>
+<section id="архитектура-стэкинг-ансамбля" class="slide level2">
+<h2>Архитектура стэкинг-ансамбля</h2>
+<!-- сгенерировали эту диаграму -->
+<pre><code>   X (13 признаков)
+       │
+   ┌───┴─────────────────┐
+   ▼                     ▼
+ LightGBM            CatBoost
+ (GPU, 300 итер)    (GPU, 400 итер)
+   │                     │
+   ▼                     ▼
+ P_lgbm (82)        P_cb (82)
+   └────────┬────────────┘
+            ▼
+   stacked (164 признака)
+            │
+            ▼
+   Logistic Regression
+   (C=1.0, lbfgs, balanced)
+            │
+            ▼
+   meta_proba (82)
+            │
+            ▼
+   + log-prior shift (per-class)
+     [grid [-2, +2], 21 точка, 2 прохода,
+      оптимизация macro-F1]
+            │
+            ▼
+   final P (82) -&gt; argmax</code></pre>
+</section>
+<section id="базовые-модели" class="slide level2">
+<h2>Базовые модели</h2>
+<p><strong>LightGBM:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a>objective<span class="op">=</span><span class="st">"multiclass"</span>, num_class<span class="op">=</span><span class="dv">82</span>,</span>
+<span id="cb5-2"><a href=""></a>class_weight<span class="op">=</span><span class="st">"balanced"</span>,</span>
+<span id="cb5-3"><a href=""></a>n_estimators<span class="op">=</span><span class="dv">300</span>, learning_rate<span class="op">=</span><span class="fl">0.05</span>,</span>
+<span id="cb5-4"><a href=""></a>num_leaves<span class="op">=</span><span class="dv">255</span>, min_data_in_leaf<span class="op">=</span><span class="dv">20</span>,</span>
+<span id="cb5-5"><a href=""></a>feature_fraction<span class="op">=</span><span class="fl">0.9</span>, bagging_fraction<span class="op">=</span><span class="fl">0.9</span>,</span>
+<span id="cb5-6"><a href=""></a>reg_lambda<span class="op">=</span><span class="fl">1.0</span>, device<span class="op">=</span><span class="st">"gpu"</span>, seed<span class="op">=</span><span class="dv">123</span></span></code></pre></div><button title="Скопировать текст" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>CatBoost:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a>iterations<span class="op">=</span><span class="dv">400</span>, depth<span class="op">=</span><span class="dv">6</span>, learning_rate<span class="op">=</span><span class="fl">0.08</span>,</span>
+<span id="cb6-2"><a href=""></a>l2_leaf_reg<span class="op">=</span><span class="fl">4.0</span>, bagging_temperature<span class="op">=</span><span class="fl">0.5</span>,</span>
+<span id="cb6-3"><a href=""></a>loss_function<span class="op">=</span><span class="st">"MultiClass"</span>,</span>
+<span id="cb6-4"><a href=""></a>eval_metric<span class="op">=</span><span class="st">"TotalF1:average=Macro"</span>,</span>
+<span id="cb6-5"><a href=""></a>auto_class_weights<span class="op">=</span><span class="st">"Balanced"</span>,</span>
+<span id="cb6-6"><a href=""></a>task_type<span class="op">=</span><span class="st">"GPU"</span>, random_seed<span class="op">=</span><span class="dv">123</span>,</span>
+<span id="cb6-7"><a href=""></a>early_stopping_rounds<span class="op">=</span><span class="dv">60</span></span></code></pre></div><button title="Скопировать текст" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="логистическая-регрессия-и-ее-калибровка" class="slide level2">
+<h2>Логистическая регрессия и ее калибровка</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href=""></a>LogisticRegression(C<span class="op">=</span><span class="fl">1.0</span>, solver<span class="op">=</span><span class="st">"lbfgs"</span>,</span>
+<span id="cb7-2"><a href=""></a>                   max_iter<span class="op">=</span><span class="dv">2000</span>,</span>
+<span id="cb7-3"><a href=""></a>                   class_weight<span class="op">=</span><span class="st">"balanced"</span>,</span>
+<span id="cb7-4"><a href=""></a>                   random_state<span class="op">=</span><span class="dv">123</span>)</span></code></pre></div><button title="Скопировать текст" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Обучается на <strong>валидации</strong>, не на трейне, чтобы не переобучиться под неоткалиброванные вероятности от бустингов</p>
+<ul>
+<li>Для каждого из 82 классов ищем оптимальный сдвиг логита в диапазоне <code>[-2, +2]</code></li>
+<li><strong>Метрика оптимизации - macro F1</strong></li>
+<li>Результат: после калибровки macro-F1 поднимается с 0.2575 до <strong>0.2696</strong> на валидации (+1.2 п.п.)</li>
+</ul>
+</section>
+<section id="сравнение-моделей" class="slide level2">
+<h2>Сравнение моделей</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Модель</th>
+<th>Macro F1</th>
+<th>Weighted F1</th>
+<th>Top-1 Acc</th>
+<th>Top-3 Acc</th>
+<th>Top-5 Acc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Single CatBoost (baseline)</td>
+<td>0.2350</td>
+<td>0.2558</td>
+<td>0.2756</td>
+<td>0.4702</td>
+<td>0.5725</td>
+</tr>
+<tr class="even">
+<td>Base: LightGBM</td>
+<td>0.2575</td>
+<td>0.2803</td>
+<td>0.2947</td>
+<td>0.4904</td>
+<td>0.5922</td>
+</tr>
+<tr class="odd">
+<td>Base: CatBoost (ensemble)</td>
+<td>0.2292</td>
+<td>0.2497</td>
+<td>0.2705</td>
+<td>0.4629</td>
+<td>0.5652</td>
+</tr>
+<tr class="even">
+<td>Ensemble (Raw)</td>
+<td>0.2575</td>
+<td>0.2789</td>
+<td>0.2843</td>
+<td>0.4663</td>
+<td>0.5643</td>
+</tr>
+<tr class="odd">
+<td><strong>Ensemble (Calibrated)</strong></td>
+<td><strong>0.2648</strong></td>
+<td><strong>0.2872</strong></td>
+<td><strong>0.2843</strong></td>
+<td>0.4654</td>
+<td>0.5618</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="положительное-влияние-ансамбля-на-конкретные-жанры" class="slide level2">
+<h2>Положительное влияние ансамбля на конкретные жанры</h2>
+<p>Топ-10 жанров с наибольшим приростом F1 (Ensemble - Single CB):</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Жанр</th>
+<th>Train count</th>
+<th>Single F1</th>
+<th>Ensemble F1</th>
+<th><span class="math inline">\(\Delta\)</span> F1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>sad</td>
+<td>4 260</td>
+<td>0.231</td>
+<td><strong>0.341</strong></td>
+<td><strong>+0.110</strong></td>
+</tr>
+<tr class="even">
+<td>hardstyle</td>
+<td>8 694</td>
+<td>0.588</td>
+<td>0.691</td>
+<td>+0.103</td>
+</tr>
+<tr class="odd">
+<td>groove</td>
+<td>9 356</td>
+<td>0.074</td>
+<td>0.158</td>
+<td>+0.084</td>
+</tr>
+<tr class="even">
+<td>romance</td>
+<td>4 563</td>
+<td>0.342</td>
+<td>0.424</td>
+<td>+0.082</td>
+</tr>
+<tr class="odd">
+<td>spanish</td>
+<td>13 411</td>
+<td>0.034</td>
+<td>0.100</td>
+<td>+0.076</td>
+</tr>
+<tr class="even">
+<td>party</td>
+<td>6 684</td>
+<td>0.302</td>
+<td>0.376</td>
+<td>+0.075</td>
+</tr>
+<tr class="odd">
+<td>tango</td>
+<td>10 548</td>
+<td>0.578</td>
+<td>0.653</td>
+<td>+0.074</td>
+</tr>
+<tr class="even">
+<td>emo</td>
+<td>14 591</td>
+<td>0.111</td>
+<td>0.185</td>
+<td>+0.074</td>
+</tr>
+<tr class="odd">
+<td>deep-house</td>
+<td>12 527</td>
+<td>0.239</td>
+<td>0.312</td>
+<td>+0.073</td>
+</tr>
+<tr class="even">
+<td>sleep</td>
+<td>12 496</td>
+<td>0.588</td>
+<td>0.654</td>
+<td>+0.067</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="отрицательное-влияние-ансамбля-на-конкретные-жанры" class="slide level2">
+<h2>Отрицательное влияние ансамбля на конкретные жанры</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Жанр</th>
+<th>Train count</th>
+<th>Single F1</th>
+<th>Ensemble F1</th>
+<th><span class="math inline">\(\Delta\)</span> F1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>punk</td>
+<td>4 338</td>
+<td>0.088</td>
+<td>0.063</td>
+<td>-0.025</td>
+</tr>
+<tr class="even">
+<td>metalcore</td>
+<td>4 387</td>
+<td>0.144</td>
+<td>0.124</td>
+<td>-0.021</td>
+</tr>
+<tr class="odd">
+<td>rock</td>
+<td>2 323</td>
+<td>0.031</td>
+<td>0.014</td>
+<td>-0.017</td>
+</tr>
+<tr class="even">
+<td>power-pop</td>
+<td>12 013</td>
+<td>0.251</td>
+<td>0.235</td>
+<td>-0.016</td>
+</tr>
+<tr class="odd">
+<td>afrobeat</td>
+<td>8 677</td>
+<td>0.191</td>
+<td>0.184</td>
+<td>-0.007</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="прирост-f1-по-жанрам-vs-размер-выборки" class="slide level2">
+<h2>Прирост F1 по жанрам vs размер выборки</h2>
+
+<img data-src="task_3/images/1.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="confusion-matrix-топ-30-жанров" class="slide level2">
+<h2>Confusion matrix: топ-30 жанров</h2>
+
+<img data-src="task_3/images/2.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="shap-важность-признаков" class="slide level2">
+<h2>SHAP: важность признаков</h2>
+<p>SHAP считался на 1500 случайно просемплированных треках:</p>
+
+<img data-src="task_3/images/4.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><p><strong>Главные признаки жанра - наличие вокала, акустичность, танцевальность.</strong> Темп и тональность почти не влияют на прогноз модели</p>
+</section>
+<section id="shap-по-выбранным-жанрам" class="slide level2">
+<h2>SHAP по выбранным жанрам</h2>
+
+<img data-src="task_3/images/3.png" class="quarto-figure quarto-figure-center r-stretch" style="width:85.0%"><p>Разрез SHAP по 5 достаточно разным жанрам (classical, death-metal, hip-hop, acoustic, edm) показывает, что для каждого жанра доминируют <strong>разные</strong> признаки: <code>acousticness</code> ярко выделяет classical, <code>speechiness</code> - hip-hop, <code>instrumentalness</code> - acoustic.</p>
+</section>
+<section id="веса-в-лог-регрессии" class="slide level2">
+<h2>Веса в лог регрессии</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Вид бустинга</th>
+<th>Доля влияния</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>LightGBM</strong></td>
+<td><strong>51.8 %</strong></td>
+</tr>
+<tr class="even">
+<td><strong>CatBoost</strong></td>
+<td><strong>48.2 %</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Бустинги вносят сопоставимый, но <strong>различающийся по жанрам</strong> вклад:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Жанр</th>
+<th>Предпочитает LGBM</th>
+<th>Жанр</th>
+<th>Предпочитает CatBoost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>rock</td>
+<td>57.8 %</td>
+<td>metalcore</td>
+<td>51.7 %</td>
+</tr>
+<tr class="even">
+<td>german</td>
+<td>57.0 %</td>
+<td>sad</td>
+<td>51.5 %</td>
+</tr>
+<tr class="odd">
+<td>edm</td>
+<td>55.9 %</td>
+<td>sertanejo</td>
+<td>51.1 %</td>
+</tr>
+<tr class="even">
+<td>swedish</td>
+<td>55.5 %</td>
+<td>minimal-techno</td>
+<td>51.0 %</td>
+</tr>
+<tr class="odd">
+<td>k-pop</td>
+<td>54.1 %</td>
+<td>club</td>
+<td>50.4 %</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(\Rightarrow\)</span> Стэкинг действительно улучшает прогноз базовых моделей (именно этого эффекта мы и хотели добиться)</p>
+</section>
+<section id="бизнес-эксперимент-популярность-плейлистов" class="slide level2">
+<h2>Бизнес-эксперимент: популярность плейлистов</h2>
+<p><strong>Гипотеза:</strong> ML-курированные плейлисты (treatment) популярнее жанрово-курированных (control).</p>
+<p><strong>Сетап:</strong></p>
+<ul>
+<li>Eligible: 60 жанров с <span class="math inline">\(\geq\)</span> 200 тестовыми треками</li>
+<li>Control: 200 плейлистов по 50 треков (по истинным классам)</li>
+<li>Treatment: 180 плейлистов по 50 треков (по прогнозам)</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Метрика</th>
+<th>Control</th>
+<th>Treatment</th>
+<th><span class="math inline">\(\Delta\)</span></th>
+<th>p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mean popularity</td>
+<td><strong>18.73</strong></td>
+<td>17.11</td>
+<td>-1.62</td>
+<td><strong>0.083</strong></td>
+</tr>
+</tbody>
+</table>
+
+<img data-src="task_3/images/5.png" class="quarto-figure quarto-figure-center r-stretch" style="width:70.0%"><p><strong>Результат - статистически не значим</strong> (p &gt; 0.05). Treatment плейлисты чуть менее популярны (но в пределах шума).</p>
+<p><strong>Интерпретация:</strong> средняя популярность как прокси метрика <span class="math inline">\(-\)</span> плохой выбор для оценки качества рекомендаций: она сильно зашумлёна и не отражает реальную пользу модели</p>
+</section>
+<section id="бизнес-эксперимент-completion-rate" class="slide level2">
+<h2>Бизнес-эксперимент: completion rate</h2>
+<p><strong>Гипотеза:</strong> ML-рекомендации увеличивают долю <strong>дослушанных</strong> треков.</p>
+<p><strong>Симуляция:</strong></p>
+<p><span class="math display">\[logit = -0.4 + 0.9*match + 0.6*audio_sim + 0.25*pop_z + N(0, 0.1)
+*completion = sigmoid(logit)\]</span></p>
+<p><strong>Сетап:</strong> 2 000 пользователей по 4 на 25 треков</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 27%">
+<col style="width: 20%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>KPI</th>
+<th>Control (true genre)</th>
+<th>Treatment (ML)</th>
+<th><span class="math inline">\(\Delta\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Completion rate</td>
+<td>68.525 %</td>
+<td><strong>70.875 %</strong></td>
+<td><strong>+2.35 п.п.</strong></td>
+</tr>
+<tr class="even">
+<td>z-statistic</td>
+<td>-</td>
+<td>-</td>
+<td>3.234</td>
+</tr>
+<tr class="odd">
+<td><strong>p-value</strong></td>
+<td>-</td>
+<td>-</td>
+<td><strong>0.00122</strong></td>
+</tr>
+<tr class="even">
+<td>95 % CI (bootstrap)</td>
+<td>-</td>
+<td>-</td>
+<td>[0.97, 3.76] п.п.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Эффект статистически значим (p &lt; 0.005)</strong></p>
+</section>
+<section id="выводы-по-задаче-3" class="slide level2">
+<h2>Выводы по задаче 3</h2>
+<ul>
+<li><strong>Ансамбль LGBM + CatBoost + LogReg + калибровка</strong> даёт <strong>+2.98 п.п.</strong> macro-F1 к одиночному CatBoost</li>
+<li><strong>Калибровка вероятностей</strong> добавляет <strong>+0.73 п.п.</strong> macro-F1 после обучения</li>
+<li>Бизнес-эффект: <strong>+2.35 п.п. completion rate</strong> (p = 0.005) - продуктово значимо</li>
+</ul>
+</section></section>
+<section>
+<section id="задача-4.-прогнозирование-трендов" class="title-slide slide level1 center">
+<h1>Задача 4. Прогнозирование трендов</h1>
+
+</section>
+<section id="постановка-задачи-3" class="slide level2 scrollable">
+<h2>Постановка задачи</h2>
+<p><strong>Цель:</strong> проанализировать долгосрочные тренды музыки и спрогнозировать их на <strong>5 лет вперёд</strong>.</p>
+<p>Два направления:</p>
+<ol type="1">
+<li><strong>Тренды аудио-характеристик</strong> (<code>energy</code>, <code>danceability</code>, <code>valence</code>, <code>acousticness</code>)</li>
+<li><strong>Популярность жанров</strong> (топ-8 жанров с непрерывной историей)</li>
+</ol>
+<p><strong>Подход:</strong></p>
+<ul>
+<li>Агрегируем датасет по годам <span class="math inline">\(\rightarrow\)</span> берём <strong>медианы</strong> признаков (устойчиво к выбросам)</li>
+<li>Train: <span class="math inline">\(\leq\)</span> 2018</li>
+<li>Test: 2019 - 2023</li>
+<li>Сравниваем 3 модели на одной выборке</li>
+</ul>
+</section>
+<section id="подход-три-модели" class="slide level2">
+<h2>Подход: три модели</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 44%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Модель</th>
+<th>Что моделирует</th>
+<th>Параметры</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Linear Regression</strong></td>
+<td>базовый линейный тренд</td>
+<td>OLS, без сезонности</td>
+</tr>
+<tr class="even">
+<td><strong>Exponential Smoothing</strong></td>
+<td>уровень + тренд (Holt)</td>
+<td>без сезонной компоненты</td>
+</tr>
+<tr class="odd">
+<td><strong>SARIMAX (1, 1, 0)</strong></td>
+<td>AR(1) с дифференцированием</td>
+<td>p=1, d=1, q=0, без экзогенных</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Метрики:</strong> MAE и RMSE на тесте 2019 - 2023.</p>
+</section>
+<section id="тренды-аудио-признаков" class="slide level2">
+<h2>Тренды аудио-признаков</h2>
+
+<img data-src="task_4/forecast.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"><p>Четыре панели - <code>danceability</code>, <code>energy</code>, <code>valence</code>, <code>acousticness</code>. Тренды 2000 - 2023 + прогноз 2024 - 2028 от трёх моделей.</p>
+<p><strong>Направления трендов:</strong></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 28%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Признак</th>
+<th>Тренд</th>
+<th>Интерпретация</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>energy</code></td>
+<td><span class="math inline">\(\uparrow\)</span></td>
+<td>музыка становится плотнее</td>
+</tr>
+<tr class="even">
+<td><code>danceability</code></td>
+<td><span class="math inline">\(\uparrow\)</span></td>
+<td>больше ритма</td>
+</tr>
+<tr class="odd">
+<td><code>loudness</code></td>
+<td><span class="math inline">\(\uparrow\)</span></td>
+<td>громче (loudness war)</td>
+</tr>
+<tr class="even">
+<td><code>tempo</code></td>
+<td><span class="math inline">\(\uparrow\)</span></td>
+<td>темп растёт</td>
+</tr>
+<tr class="odd">
+<td><code>acousticness</code></td>
+<td><span class="math inline">\(\downarrow\)</span></td>
+<td>живой звук теряет долю</td>
+</tr>
+<tr class="even">
+<td><code>instrumentalness</code></td>
+<td><span class="math inline">\(\downarrow\)</span></td>
+<td>вокал доминирует</td>
+</tr>
+<tr class="odd">
+<td><code>valence</code></td>
+<td><span class="math inline">\(\approx\)</span> стабилен</td>
+<td>(с очень медленным снижением)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="топ-8-жанров-динамика-популярности" class="slide level2">
+<h2>Топ-8 жанров: динамика популярности</h2>
+
+<img data-src="task_4/genre_popularity.png" class="quarto-figure quarto-figure-center r-stretch" style="width:85.0%"><p>Анализируемые жанры: <strong>black-metal, gospel, ambient, acoustic, alt-rock, emo, indian, k-pop</strong>.</p>
+<p><code>k-pop</code> показывает <strong>взрывной рост</strong> в 2010-х; <code>emo</code> и <code>alt-rock</code> теряют долю; <code>gospel</code> и <code>acoustic</code> стабильны.</p>
+</section>
+<section id="прогноз-по-жанрам" class="slide level2">
+<h2>Прогноз по жанрам</h2>
+
+<img data-src="task_4/genre_forecast.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"><p>8 панелей (по одной на жанр), на каждой - три модели прогноза до 2028 года.</p>
+<p>Прогнозы - <strong>направляющие</strong>, не абсолютные: <code>SARIMAX</code> и <code>ExpSmoothing</code> близки, <code>LinearRegression</code> сильно расходится на горизонте.</p>
+</section>
+<section id="метрики-прогноза" class="slide level2">
+<h2>Метрики прогноза</h2>
+<p>Усреднённый MAE по 4 ключевым аудио-признакам:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Модель</th>
+<th>Avg MAE</th>
+<th>Avg RMSE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LinearRegression</td>
+<td>0.0343</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td><strong>Exponential Smoothing</strong></td>
+<td><strong>0.0148</strong></td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td><strong>SARIMAX (1, 1, 0)</strong></td>
+<td><strong>0.0148</strong></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Победители: Holt и SARIMAX</strong> (дают практически одинаковую точность), обе модели в <strong>2.3 раза точнее</strong> простого линейного тренда.</p>
+<p>Разбивка SARIMAX по признакам:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Признак</th>
+<th>MAE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>danceability</code></td>
+<td>0.0048</td>
+</tr>
+<tr class="even">
+<td><code>energy</code></td>
+<td>0.0139</td>
+</tr>
+<tr class="odd">
+<td><code>acousticness</code></td>
+<td>0.0196</td>
+</tr>
+<tr class="even">
+<td><code>valence</code></td>
+<td>0.0210</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="выводы-по-задаче-4" class="slide level2">
+<h2>Выводы по задаче 4</h2>
+<ul>
+<li><strong>Музыка движется к более интенсивному, танцевальному, громкому звуку</strong>; акустический и инструментальный сегменты сжимаются</li>
+<li><strong>Holt-Winters / SARIMAX(1,1,0) - оптимальные модели</strong> для медианных временных рядов аудио-фичей</li>
+<li>Линейный тренд плох на горизонте &gt; 2 лет</li>
+<li><strong>Бизнес-применения:</strong>
+<ul>
+<li>ожидать рост запросов на более энергичные треки, чаще добавлять их в курируемые подборки</li>
+<li>5-летние прогнозы - для лучшего планирования инвестиций в авторов в зависимости от жанров</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="бонусная-задача.-рекомендательная-система" class="title-slide slide level1 center">
+<h1>Бонусная задача. Рекомендательная система</h1>
+
+</section>
+<section id="постановка-задачи-4" class="slide level2">
+<h2>Постановка задачи</h2>
+<p><strong>Цель:</strong> для произвольного затравочного трека находить <strong>5 похожих</strong> по аудио-характеристикам.</p>
+<p><strong>Ограничения:</strong></p>
+<ul>
+<li>Только аудио - без коллаборативных рекомендаций</li>
+<li>Должно работать быстро + хорошо масштабироваться на большую музыкальную библиотеку</li>
+</ul>
+<p><strong>Архитектура:</strong> контентная система на <strong>K-Nearest Neighbors</strong>.</p>
+</section>
+<section id="подход-knn-на-9-признаках" class="slide level2">
+<h2>Подход: KNN на 9 признаках</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Алгоритм</td>
+<td><code>ball_tree</code> (sklearn)</td>
+</tr>
+<tr class="even">
+<td>Метрика</td>
+<td>L2</td>
+</tr>
+<tr class="odd">
+<td>Признаков</td>
+<td>9 аудио фичей</td>
+</tr>
+<tr class="even">
+<td>K</td>
+<td>20 кандидатов <span class="math inline">\(\rightarrow\)</span> top-5</td>
+</tr>
+<tr class="odd">
+<td>Препроцессинг</td>
+<td>StandardScaler</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="пайплайн-рекомендации" class="slide level2">
+<h2>Пайплайн рекомендации</h2>
+<!-- сгенерировали эту диаграму -->
+<pre><code>   запрос (название/артист)
+        │
+        ▼
+   найти seed track в индексе
+        │
+        ▼
+   ball_tree -&gt; 20 ближайших (без самого себя)
+        │
+        ▼
+   similarity = (1 - dist / dist_max) * 100 %
+        │
+        ▼
+   sort &amp; take top-5</code></pre>
+</section>
+<section id="профиль-рекомендаций" class="slide level2">
+<h2>Профиль рекомендаций</h2>
+
+<img data-src="task_bonus/result/rec_radar_chart.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="pca" class="slide level2">
+<h2>PCA</h2>
+
+<img data-src="task_bonus/result/rec_pca_position.png" class="quarto-figure quarto-figure-center r-stretch"><p><strong>Вывод:</strong> рекомендации лежат в <strong>компактной окрестности</strong> seed-трека.</p>
+</section>
+<section id="демонстрация-работы-рекомендательной-системы" class="slide level2">
+<h2>Демонстрация работы рекомендательной системы</h2>
+
+<img data-src="task_bonus/result/rec_batch_demo.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="оценка-качества" class="slide level2">
+<h2>Оценка качества</h2>
+
+<img data-src="task_bonus/result/rec_quality_eval.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><p><strong>Результат:</strong> распределение сильно сдвинуто вправо <span class="math inline">\(\Rightarrow\)</span> большинство рекомендаций сохраняют настроение</p>
+</section>
+<section id="similarity-bars" class="slide level2">
+<h2>Similarity bars</h2>
+<iframe src="task_bonus/result/rec_similarity_bars.html" width="100%" height="1000" style="border:0; background:white;">
+</iframe>
+</section>
+<section id="выводы-по-бонусной-задаче" class="slide level2">
+<h2>Выводы по бонусной задаче</h2>
+<ul>
+<li><strong>Контентный подход выходит за рамки жанра</strong> - рекомендует похожие <strong>по звучанию</strong> треки даже из других жанров</li>
+<li><strong>Качество подтверждено intra-cluster hit-rate</strong></li>
+<li><strong>Можно использовать кластеры из первой задачи</strong></li>
+<li>Можно масштабировать (<strong>использование ANN</strong>)</li>
+</ul>
+</section></section>
+<section>
+<section id="выводы" class="title-slide slide level1 center">
+<h1>Выводы</h1>
+
+</section>
+<section id="общие-выводы-по-всем-задачам" class="slide level2 scrollable">
+<h2>Общие выводы по всем задачам</h2>
+<ol type="1">
+<li><p><strong>Настроение важнее жанра.</strong></p></li>
+<li><p><strong>Аудио-признаки доминируют.</strong></p></li>
+<li><p><strong>Музыкальные предпочтения изменяются во времени.</strong></p></li>
+<li><p><strong>Стэкинг и калибровка вероятностей хорошо подходит для многожанровой классификации</strong></p></li>
+</ol>
+</section>
+<section id="бизнес-рекомендации" class="slide level2">
+<h2>Бизнес-рекомендации</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 25%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Инициатива</th>
+<th>Источник</th>
+<th>Ожидаемый эффект</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Mood Selector в UI</strong></td>
+<td>Задача 1</td>
+<td><span class="math inline">\(\uparrow\)</span> session length, <span class="math inline">\(\downarrow\)</span> skip rate</td>
+</tr>
+<tr class="even">
+<td><strong>RecSys на KNN</strong></td>
+<td>Бонус</td>
+<td>+2.35 п.п. completion rate</td>
+</tr>
+<tr class="odd">
+<td><strong>Классификация треков по жанрам</strong></td>
+<td>Задача 3</td>
+<td>Улучшение поиска и категоризации (можно использовать выход модели в качестве доп фичей)</td>
+</tr>
+<tr class="even">
+<td><strong>Аналитика трендов для музыкальных авторов</strong></td>
+<td>Задача 1 + Задача 4</td>
+<td>Потенциальный доп поток выручки</td>
+</tr>
+<tr class="odd">
+<td><strong>Прогноз хитов среди треков</strong></td>
+<td>Задача 2</td>
+<td>Приоритезация инвестиций в треки/жанры/исполнителей</td>
+</tr>
+<tr class="even">
+<td><strong>Мониторинг изменения предпочтений пользователей со временем</strong></td>
+<td>Задача 4</td>
+<td>Раннее обнаружение новых трендов</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="использование-ии-в-проекте" class="slide level2">
+<h2>Использование ИИ в проекте</h2>
+<ul>
+<li>Визуальное оформление презентации, графиков</li>
+<li>Поиск ошибок в коде, помощь с дебагом</li>
+</ul>
+</section>
+<section id="благодарности" class="slide level2">
+<h2>Благодарности</h2>
+<div style="text-align: center; font-size: 2em; font-weight: bold;">
+<p><br><br> Спасибо за внимание!</p>
+</div>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="presentation_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="presentation_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="presentation_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="presentation_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="presentation_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="presentation_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="presentation_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="presentation_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Скопировано");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Скопировано");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
