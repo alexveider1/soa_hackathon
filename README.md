@@ -3,6 +3,8 @@
 ### Запуск (требуется только `uv`)
 
 ```bash
+git clone https://github.com/alexveider1/soa_hackathon.git
+
 uv sync
 uv run jupyterlab
 # запустить ноутбуки по отдельности
