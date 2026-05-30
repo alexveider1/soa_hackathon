@@ -5,6 +5,8 @@
 ```bash
 git clone https://github.com/alexveider1/soa_hackathon.git
 
+cd soa_hackathon
+
 uv sync
 uv run jupyterlab
 # запустить ноутбуки по отдельности
